@@ -1,0 +1,231 @@
+body {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
+.welcome{
+    background-color: #0F2854;    
+}
+.head {
+    background-color: #1C4D8D;
+}
+#hv{
+    background-color: #5F9598;
+}
+.hvcontent {
+    background-color: #5F9598;
+    text-decoration: none;
+}
+#mo {
+    background-color: #4988C4;
+}
+.mohan {
+    background-color: #4988C4;
+}
+#trio {
+    background-color: #1C4D8D;
+}
+.trioc {
+    background-color: #BDE8F5;
+    color: black;
+}
+footer {
+    background-color:  #0F2854;
+}
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+.hv1 {
+    height: 300px;
+    width: 200px;
+    background-color: green;
+    background-image: url("h1.jpeg");
+    background-size: cover;
+}
+.hv2 {
+    height: 300px;
+    width: 200px;
+    background-color: green;
+    background-image: url("h2.jpeg");
+    background-size: cover;
+}
+.hv3 {
+    height: 300px;
+    width: 200px;
+    background-color: green;
+    background-image: url("h3.jpeg");
+    background-size: cover;
+}
+.hv1, .hv2, .hv3 {
+    animation: zoomIn 0.8s ease forwards;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.hv1:active, .hv2:active, .hv3:active {
+    transform: scale(0.95);
+}
+.hv1, .hv2, .hv3 {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.hv1 { animation-delay: 0s; }
+.hv2 { animation-delay: 0.2s; }
+.hv3 { animation-delay: 0.4s; }
+.welcome, .head {
+    animation: fadeSlide 0.8s ease;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width: 768px) {
+    .images {
+        flex-direction: row;
+    }
+}
+body {
+    animation: pageFade 0.8s ease-in;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.welcome {
+    animation: slideUp 0.9s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.head {
+    animation: popText 0.7s ease;
+}
+
+@keyframes popText {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+#hv, #mo, #trio {
+    animation: fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.welcome:active,
+.head:active,
+#hv:active,
+#mo:active,
+#trio:active {
+    transform: scale(0.98);
+}
+.welcome {
+    animation: floatBg 4s ease-in-out infinite;
+}
+
+@keyframes floatBg {
+    0% { background-position: center; }
+    50% { background-position: center 10px; }
+    100% { background-position: center; }
+}
+.hs, .ms, .trioimg {
+    animation: firstImgReveal 0.9s ease forwards;
+}
+
+@keyframes firstImgReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+.hs { animation-delay: 0.1s; }
+.ms { animation-delay: 0.3s; }
+.trioimg { animation-delay: 0.5s; }
+.hs, .ms, .trioimg {
+    transform-origin: center;
+}
+.hs:active, .ms:active, .trioimg:active {
+    transform: scale(0.97);
+}
+.hs, .ms, .trioimg {
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+}
+.hs, .ms {
+    animation: floatFirst 5s ease-in-out infinite;
+}
+
+@keyframes floatFirst {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+.welpic{
+    height: 200px;
+    width: 400px;
+    background-image: url("welcome.webp");
+    background-color: white;
+    background-size: cover;
+    position: relative;
+    animation: moveLR 6s linear infinite;
+}
+@keyframes moveLR {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100vw);
+    }
+}
